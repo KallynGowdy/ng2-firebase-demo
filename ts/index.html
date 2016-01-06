@@ -8,19 +8,32 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
         System.config({
+            defaultJSExtensions: true,
             packages: {
                 app: {
                     format: 'register',
                     defaultExtension: 'js'
                 }
+            },
+            map: {
+                'firebase-angular2': 'node_modules/firebase-angular2'
+            },
+            paths: {
+                'rxjs/add/observable/*': 'node_modules/rxjs/add/observable/*.js',
+                'rxjs/add/operator/*': 'node_modules/rxjs/add/operator/*.js',
+                'rxjs/*': 'node_modules/rxjs/*.js'
             }
         });
-        System.import('app/boot')
-                .then(null, console.error.bind(console));
+        System.import('node_modules/rxjs/bundles/Rx.js').then(function () {
+            return System.import('node_modules/angular2/bundles/angular2.dev.js');
+        }).then(function () {
+            return System.import('app/boot');
+        }).catch(console.error.bind(console));
     </script>
 
 </head>
