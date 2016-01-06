@@ -1,0 +1,6 @@
+## Angular 2 TypeScript
+
+*.js
+*.js.map
+*.d.ts
+!typings

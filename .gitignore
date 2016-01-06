@@ -85,11 +85,3 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-## Angular 2 TypeScript
-
-*.js
-*.js.map
-*.d.ts
-!typings
-!dist
-docs
