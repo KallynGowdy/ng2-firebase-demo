@@ -8,7 +8,7 @@
                 {
                     useFactory: function () {
                         return new app.FirebaseHeroService(
-                            new firebaseAngular2.FirebaseService(
+                            new ng2Firebase.FirebaseService(
                                 new Firebase('https://fb-angular2-demo.firebaseio.com/')
                             )
                         );
