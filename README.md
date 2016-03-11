@@ -1,5 +1,5 @@
-# firebase-angular2 Demo
-A Demo Application for firebase-angular2
+# ng2-firebase Demo
+A Demo Application for [ng2-firebase](https://github.com/KallynGowdy/ng2-firebase)
 
 This repository is split into two parts, a TypeScript implementation, and an ES5 implementation.
 
