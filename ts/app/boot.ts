@@ -4,7 +4,7 @@ import {AppComponent} from './app.component'
 import {MockHeroService} from './mock-hero.service';
 import {HeroService} from './hero.service';
 import {FirebaseHeroService} from "./firebase-hero.service";
-import {FirebaseServiceProvider, FirebaseService} from 'firebase-angular2/core';
+import {FirebaseServiceProvider, FirebaseService} from 'ng2-firebase/core';
 import {Inject} from "angular2/core";
 declare var Firebase;
 
