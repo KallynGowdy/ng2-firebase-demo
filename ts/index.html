@@ -4,36 +4,13 @@
     <title>Angular 2 QuickStart</title>
 
     <!-- 1. Load libraries -->
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
-        System.config({
-            defaultJSExtensions: true,
-            packages: {
-                app: {
-                    format: 'register',
-                    defaultExtension: 'js'
-                }
-            },
-            map: {
-                'ng2-firebase': 'node_modules/ng2-firebase'
-            },
-            paths: {
-                'rxjs/add/observable/*': 'node_modules/rxjs/add/observable/*.js',
-                'rxjs/add/operator/*': 'node_modules/rxjs/add/operator/*.js',
-                'rxjs/*': 'node_modules/rxjs/*.js'
-            }
-        });
-        System.import('node_modules/rxjs/bundles/Rx.js').then(function () {
-            return System.import('node_modules/angular2/bundles/angular2.dev.js');
-        }).then(function () {
-            return System.import('app/boot');
-        }).catch(console.error.bind(console));
+        System.import("app");
     </script>
 
 </head>

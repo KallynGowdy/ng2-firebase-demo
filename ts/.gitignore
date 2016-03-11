@@ -4,3 +4,4 @@
 *.js.map
 *.d.ts
 !typings
+!config.js
