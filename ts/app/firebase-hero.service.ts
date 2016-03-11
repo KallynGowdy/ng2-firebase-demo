@@ -2,7 +2,7 @@ import {Injectable} from "angular2/core";
 import {HeroService} from "./hero.service";
 import {HEROES} from './mock-heroes';
 import {Observable} from "rxjs/Rx";
-import {FirebaseService} from 'firebase-angular2/core';
+import {FirebaseService} from 'ng2-firebase/core';
 import {Hero} from "./hero";
 
 @Injectable()
@@ -11,6 +11,7 @@ export class FirebaseHeroService extends HeroService {
     private service:FirebaseService;
 
     constructor(firebaseService:FirebaseService) {
+        super();
         this.service = firebaseService.child('heroes');
     }
 
