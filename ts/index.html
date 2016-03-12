@@ -5,6 +5,15 @@
 
     <!-- 1. Load libraries -->
     <script src="jspm_packages/system.js"></script>
+    <script>
+        var CONFIG = {
+            isDebug: typeof document === "undefined" || document.location.hostname === "localhost"  
+        };
+        
+        System.config({
+            baseURL: CONFIG.isDebug ? "/" : "/ng2-firebase-demo/ts"
+        });
+    </script>
     <script src="jspm.browser.js"></script>
     <script src="config.js"></script>
     <script async src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
@@ -26,8 +35,9 @@
 </head>
 
 <!-- 3. Display the application -->
+
 <body>
-<my-app>Loading...</my-app>
+    <my-app>Loading...</my-app>
 </body>
 
 </html>

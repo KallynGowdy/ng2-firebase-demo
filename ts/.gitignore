@@ -1,8 +1,11 @@
 ## Angular 2 TypeScript
 
-*.js
-*.js.map
-*.d.ts
+app/*.js
+app/*.js.map
+app/*.d.ts
 !typings
 !config.js
+!jspm.browser.js
 jspm_packages
+
+!bundles/**/*
