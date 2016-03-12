@@ -1,0 +1,50 @@
+{
+  "main": "build/lib/zone.js",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    },
+    "lib/browser/*": {
+      "format": "esm"
+    },
+    "lib/keys.ts": {
+      "format": "esm"
+    },
+    "lib/microtask.ts": {
+      "format": "esm"
+    },
+    "lib/patch/browser.ts": {
+      "format": "esm"
+    },
+    "lib/patch/define-property.ts": {
+      "format": "esm"
+    },
+    "lib/patch/file-reader.ts": {
+      "format": "esm"
+    },
+    "lib/patch/functions.ts": {
+      "format": "esm"
+    },
+    "lib/patch/geolocation.ts": {
+      "format": "esm"
+    },
+    "lib/patch/mutation-observer.ts": {
+      "format": "esm"
+    },
+    "lib/patch/promise.ts": {
+      "format": "esm"
+    },
+    "lib/zone.ts": {
+      "format": "esm"
+    },
+    "lib/zones/*": {
+      "format": "esm"
+    }
+  }
+}

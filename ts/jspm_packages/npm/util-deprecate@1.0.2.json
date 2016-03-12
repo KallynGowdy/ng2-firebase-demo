@@ -1,0 +1,19 @@
+{
+  "main": "node.js",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    }
+  },
+  "map": {
+    "./node.js": {
+      "browser": "./browser.js"
+    }
+  }
+}

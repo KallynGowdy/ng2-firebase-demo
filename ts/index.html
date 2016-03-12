@@ -5,12 +5,22 @@
 
     <!-- 1. Load libraries -->
     <script src="jspm_packages/system.js"></script>
+    <script src="jspm.browser.js"></script>
     <script src="config.js"></script>
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <script async src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
-        System.import("app");
+        function importMainModule() {
+            return System.import("ng2-firebase-demo-ts");
+        }
+        if(!CONFIG.isDebug) {
+            System.import("bundles/main").then(function(bundle) {
+                return importMainModule();
+            });
+        } else {
+            importMainModule();
+        }
     </script>
 
 </head>

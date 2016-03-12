@@ -1,0 +1,19 @@
+{
+  "main": "lib/elliptic.js",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    }
+  },
+  "map": {
+    "./lib/elliptic/curve.js": "./lib/elliptic/curve/index.js",
+    "./lib/elliptic/ec.js": "./lib/elliptic/ec/index.js",
+    "./lib/elliptic/eddsa.js": "./lib/elliptic/eddsa/index.js"
+  }
+}

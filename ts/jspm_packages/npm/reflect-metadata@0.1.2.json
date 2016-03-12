@@ -1,0 +1,17 @@
+{
+  "main": "Reflect.js",
+  "map": {
+    "crypto": "@empty"
+  },
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    }
+  }
+}
