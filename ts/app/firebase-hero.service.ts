@@ -2,35 +2,33 @@ import {Injectable} from "angular2/core";
 import {HeroService} from "./hero.service";
 import {HEROES} from './mock-heroes';
 import {Observable} from "rxjs/Rx";
-import {FirebaseService} from 'ng2-firebase/core';
+import {FirebaseService, FirebaseArray} from 'ng2-firebase/core';
 import {Hero} from "./hero";
 
 @Injectable()
 export class FirebaseHeroService extends HeroService {
 
-    private service:FirebaseService;
+    private array: FirebaseArray;
 
-    constructor(firebaseService:FirebaseService) {
+    constructor(firebaseService: FirebaseService) {
         super();
-        this.service = firebaseService.child('heroes');
+        this.array = firebaseService.child('heroes').asArray();
     }
 
     getHeroes() {
-        var service = this.service;
-        return service.value.map((heroes) => {
-            return heroes.map((h, i) => {
-                // TODO: Cleanup
-                return {
-                    id: h.id,
-                    name: h.name,
-                    save: function () {
-                        return service.child(i.toString()).setData({
-                            id: this.id,
-                            name: this.name
-                        });
-                    }
+        var arr = this.array;
+        return arr.map((h: Hero, i) => {
+            // TODO: Cleanup
+            return {
+                id: h.id,
+                name: h.name,
+                save: function() {
+                    return arr.set(i, {
+                        id: this.id,
+                        name: this.name
+                    });
                 }
-            })
+            };
         });
     }
 }

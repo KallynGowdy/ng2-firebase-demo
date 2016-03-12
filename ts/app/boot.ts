@@ -1,3 +1,5 @@
+/// <reference path="../typings/es6-shim/es6-shim.d.ts" />
+
 import "zone.js";
 import "reflect-metadata";
 import {bootstrap}    from 'angular2/platform/browser'

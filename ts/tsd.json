@@ -6,7 +6,7 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "es6-shim/es6-shim.d.ts": {
-      "commit": "0144ad5a74053f2292424847259c4c8e1d0fecaa"
+      "commit": "0d622d857f97d44ea7dcad2b3edec1f23c48fe9e"
     }
   }
 }
