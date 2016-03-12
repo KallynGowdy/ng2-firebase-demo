@@ -5,3 +5,4 @@
 *.d.ts
 !typings
 !config.js
+jspm_packages
