@@ -1,0 +1,64 @@
+{
+  "name": "ng2-firebase",
+  "version": "0.7.5",
+  "description": "An Angular 2 Wrapper for the Firebase JavaScript SDK",
+  "scripts": {
+    "build:test": "tsc",
+    "build:test:w": "tsc -w",
+    "build:publish": "tsc && npm run build:package",
+    "build:docs": "typedoc --out ./docs --name \"Angular 2 Firebase\" --readme ./README.md --target ES5 --mode file --externalPattern \"./node_modules/**/*\" --excludeExternals --module commonjs --moduleResolution node --emitDecoratorMetadata --experimentalDecorators \"./src\"",
+    "build:package": "npm run webpack",
+    "webpack": "webpack --display-modules",
+    "typedoc": "typedoc",
+    "live": "live-server --open=unit-tests.html",
+    "karma": "karma",
+    "pretest": "tsc",
+    "test": "npm run karma -- start --single-run --browsers SauceLabs",
+    "test:w": "concurrent \"npm run karma -- start --browsers Chrome\" \"npm run build:test:w\"",
+    "prepublish": "npm run build:publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KallynGowdy/angular2-firebase"
+  },
+  "bugs": {
+    "url": "https://github.com/KallynGowdy/angular2-firebase/issues"
+  },
+  "keywords": [
+    "angular2",
+    "firebase",
+    "Rx",
+    "Observable"
+  ],
+  "author": "Kallyn Gowdy <kallyngowdy@gmail.com>",
+  "license": "Apache-2.0",
+  "directories": [
+    "src"
+  ],
+  "dependencies": {
+    "angular2": "^2.0.0-beta.9",
+    "firebase": "~2.3.2",
+    "rxjs": "^5.0.0-beta.2",
+    "typescript": "^1.8.7"
+  },
+  "devDependencies": {
+    "concurrently": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "jasmine-core": "2.4.1",
+    "karma": "^0.13.16",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.2",
+    "karma-sauce-launcher": "^0.3.0",
+    "lite-server": "^1.3.1",
+    "live-server": "^0.9.0",
+    "phantomjs": "^1.9.19",
+    "sinon": "^1.17.2",
+    "systemjs": "^0.19.6",
+    "typedoc": "^0.3.12",
+    "typescript": "^1.7.5",
+    "webpack": "^1.12.10"
+  }
+}

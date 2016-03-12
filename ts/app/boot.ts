@@ -1,3 +1,5 @@
+import "zone.js";
+import "reflect-metadata";
 import {bootstrap}    from 'angular2/platform/browser'
 import {provide} from "angular2/core";
 import {AppComponent} from './app.component'
@@ -6,6 +8,7 @@ import {HeroService} from './hero.service';
 import {FirebaseHeroService} from "./firebase-hero.service";
 import {FirebaseServiceProvider, FirebaseService} from 'ng2-firebase/core';
 import {Inject} from "angular2/core";
+
 declare var Firebase;
 
 bootstrap(AppComponent, [

@@ -1,0 +1,17 @@
+{
+  "main": "lib/websocket_extensions",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    }
+  },
+  "map": {
+    "./lib/pipeline.js": "./lib/pipeline/index.js"
+  }
+}

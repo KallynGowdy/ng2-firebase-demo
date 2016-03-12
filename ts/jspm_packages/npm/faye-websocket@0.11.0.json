@@ -1,0 +1,15 @@
+{
+  "main": "lib/faye/websocket",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    },
+    "..": true
+  }
+}

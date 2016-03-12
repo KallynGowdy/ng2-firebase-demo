@@ -1,0 +1,19 @@
+{
+  "main": "lib/firebase-node.js",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    }
+  },
+  "map": {
+    "./lib/firebase-node.js": {
+      "browser": "./lib/firebase-web.js"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "main": "readable.js",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    }
+  },
+  "map": {
+    "util": {
+      "browser": "@empty"
+    }
+  }
+}

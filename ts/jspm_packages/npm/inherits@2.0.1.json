@@ -1,0 +1,19 @@
+{
+  "main": "inherits.js",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    }
+  },
+  "map": {
+    "./inherits.js": {
+      "browser": "./inherits_browser.js"
+    }
+  }
+}

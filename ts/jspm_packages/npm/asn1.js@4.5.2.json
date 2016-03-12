@@ -1,0 +1,23 @@
+{
+  "main": "lib/asn1.js",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    }
+  },
+  "map": {
+    "./lib/asn1/base.js": "./lib/asn1/base/index.js",
+    "./lib/asn1/constants.js": "./lib/asn1/constants/index.js",
+    "./lib/asn1/decoders.js": "./lib/asn1/decoders/index.js",
+    "./lib/asn1/encoders.js": "./lib/asn1/encoders/index.js",
+    "./rfc/2560.js": "./rfc/2560/index.js",
+    "./rfc/5280.js": "./rfc/5280/index.js",
+    "asn1.js": "."
+  }
+}
