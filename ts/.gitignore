@@ -6,6 +6,9 @@ app/*.d.ts
 !typings
 !config.js
 !jspm.browser.js
-jspm_packages
+jspm_packages/npm
+jspm_packages/github
+jspm_packages/.dependencies.json
+jspm_packages/.loaderversions
 
 !bundles/**/*
