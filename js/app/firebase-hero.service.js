@@ -1,9 +1,9 @@
 (function(app) {
     app.FirebaseHeroService = ng.core
         .Class({
-            constructor: function(firebaseService) {
+            constructor: [ng2Firebase.FirebaseService, function(firebaseService) {
                 this.array = firebaseService.child('heroes').asArray();
-            },
+            }],
 
             getHeroes: function() {
                 var _this = this;

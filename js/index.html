@@ -3,18 +3,33 @@
 <head>
     <title>Angular 2 QuickStart</title>
 
-    <!-- 1. Load libraries -->
-    <script src="lib/angular2-polyfills.js"></script>
-    <script src="lib/Rx.umd.js"></script>
-    <script src="lib/angular2-all.umd.js"></script>
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-    <script src="lib/ng2-firebase-all.umd.js"></script>
+    <!-- Load libraries -->
+    <!-- POLYFILLS -->
+    <script src="lib/core-js.shim.min.js"></script>
 
-    <!-- 2. Load our 'modules' -->
+    <!-- Angular 2 Dependencies -->
+    <script src="lib/zone.min.js"></script>
+    <script src="lib/Reflect.js"></script>
+    <script src="lib/Rx.min.js"></script>
+
+    <!-- Angular 2 -->
+    <script src="lib/core.umd.min.js"></script>
+    <script src="lib/common.umd.min.js"></script>
+    <script src="lib/compiler.umd.min.js"></script>
+    <script src="lib/forms.umd.min.js"></script>
+    <script src="lib/platform-browser.umd.min.js"></script>
+    <script src="lib/platform-browser-dynamic.umd.min.js"></script>
+
+    <!-- App Dependencies -->
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <script src="lib/ng2-firebase-all.umd.min.js"></script>
+
+    <!-- App (our 'modules') -->
     <script src="app/firebase-hero.service.js"></script>
     <script src="app/hero-detail.component.js"></script>
-    <script src='app/app.component.js'></script>
-    <script src='app/boot.js'></script>
+    <script src="app/app.component.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/boot.js"></script>
 
 </head>
 
