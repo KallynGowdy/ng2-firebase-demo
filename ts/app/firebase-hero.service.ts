@@ -1,4 +1,4 @@
-import {Injectable} from "angular2/core";
+import {Injectable} from "@angular/core";
 import {HeroService} from "./hero.service";
 import {HEROES} from './mock-heroes';
 import {Observable} from "rxjs/Rx";
